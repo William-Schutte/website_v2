@@ -13,6 +13,12 @@ module.exports = {
       backgroundImage: {
         'hero': "url('./images/bg-keyboard.jpg')",
       },
+      height: {
+        lg: '450px',
+      },
+      width: {
+        lg: '800px',
+      },
       fontSize: {
         'customL': ['8rem', '8rem'],
         'customXL': ['14rem', '14rem'],

@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className="flex w-screen h-screen bg-black">
+      <div className="bg-black">
         <App />
       </div>
     </BrowserRouter>
