@@ -10,4 +10,16 @@
       hover:text-red-500
       transition-colors duration-300 ease-in-out;
    }
+
+   .nav-link {
+     @apply w-full text-center text-4xl py-4 bg-gray-800 rounded-md
+      hover:text-red-500 hover:translate-x-4
+      transition-all duration-300 ease-in-out;
+   }
+
+   .nav-link-selected {
+    @apply w-full text-center text-4xl py-4 bg-gray-800 rounded-md
+      translate-x-2 text-gray-400
+      transition-all duration-300 ease-in-out;
+  }
  }

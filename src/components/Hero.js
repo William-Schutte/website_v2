@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence, animate } from "framer-motion";
-import { headerAnimations, linkAnimations } from '../data/animations.js';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from "framer-motion";
+import { pageAnimations, headerAnimations, linkAnimations } from '../data/animations.js';
 
 const defaultAnimationStates = {
   h1: "visible1",
@@ -17,6 +18,7 @@ const exitAnimationStates = {
   link2: "exit1",
   link3: "exit2",
 };
+// <div className="flex w-screen h-screen bg-black">
 
 const Hero = () => {
   const [linkClicked, setLinkClicked] = useState(false);
@@ -30,7 +32,12 @@ const Hero = () => {
   }
 
   return (
-    <section className="w-screen h-screen bg-hero bg-cover">
+    <motion.section
+      className="w-screen h-screen bg-hero bg-cover"
+      variants={pageAnimations}
+      animate="enter"
+      exit="exit"
+    >
       <div className="w-screen h-screen text-white backdrop-filter backdrop-blur-lg">
         <div className="w-1/2 mx-auto flex flex-col font-mdtall relative top-1/4">
           <motion.h1
@@ -50,6 +57,7 @@ const Hero = () => {
             <AnimatePresence
               exitBeforeEnter={true}
             >
+              <Link to="/work">
               <motion.li
                 key={1}
                 className="main-link"
@@ -60,7 +68,9 @@ const Hero = () => {
                 onClick={() => {
                   handleLinkClick('link1');
                 }}
-              >Work</motion.li>
+              >Work
+              </motion.li>
+              </Link>
               <motion.li
                 key={2}
                 className="main-link"
@@ -87,7 +97,7 @@ const Hero = () => {
           </ul>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

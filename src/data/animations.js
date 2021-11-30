@@ -1,3 +1,35 @@
+export const pageAnimations = {
+  initial: {
+    x: 1200,
+    opacity: 0,
+  },
+  enter: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: .4,
+      type: 'spring',
+      damping: 6,
+      stiffness: 30,
+    },
+  },
+  exit: {
+    scale: 1,
+    x: 0,
+    opacity: .0,
+    transition: {
+      duration: .5,
+      delay: 1,
+    },
+  },
+};
+
+export const navAnimations = {
+  initial: {opacity: 0, x: -100, transition: { duration: 1, }, },
+  animate: { opacity: 1, x: 0, transition: { duration: 1, delay: 2, ease: [.25,.4,.08,1], }},
+  exit: {}
+};
+
 export const headerAnimations = {
   hidden: {
     y: '-600px',
