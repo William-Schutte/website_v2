@@ -6,7 +6,7 @@ import { navAnimations } from '../data/animations';
 const Sidebar = ({ currentPage }) => {
   return (
     <motion.nav
-      className="w-16 h-screen bg-gray-800 flex flex-col justify-between fixed top-0 left-0"
+      className="w-16 h-screen bg-gray-800 flex flex-col justify-between fixed top-0 left-0 z-50"
       variants={navAnimations}
       initial="initial"
       animate="animate"

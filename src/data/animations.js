@@ -1,22 +1,49 @@
 export const pageAnimations = {
-  initial: {
+  startRight: {
     x: 1200,
+    opacity: 0,
+  },
+  startBottom: {
+    y: 800,
+    opacity: 0,
+  },
+  startCenter: {
     opacity: 0,
   },
   enter: {
     x: 0,
+    y: 0,
     opacity: 1,
     transition: {
-      duration: .4,
+      duration: 1,
       type: 'spring',
       damping: 6,
       stiffness: 30,
+      delay: .3,
+      delayChildren: .5,
+      staggerChildren: .5,
     },
   },
   exit: {
+    opacity: 0,
+    transition: {
+      duration: .5,
+      delay: 1,
+    }
+  },
+  exitRight: {
     scale: 1,
-    x: 0,
-    opacity: .0,
+    x: 1200,
+    opacity: 0,
+    transition: {
+      duration: .5,
+      delay: 1,
+    },
+  },
+  exitBottom: {
+    scale: 1,
+    y: 800,
+    opacity: 0,
     transition: {
       duration: .5,
       delay: 1,
@@ -135,6 +162,38 @@ export const linkAnimations = {
     transition: {
       duration: 2,
       delay: .2,
+    }
+  },
+};
+
+export const contentParent = {
+  initial: {
+    x: -600,
+    opacity: 0,
+  },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 1,
+      delayChildren: 2,
+      staggerChildren: .6,
+    }
+  }
+};
+
+export const contentAnimations = {
+  initial: {
+    x: 400,
+    opacity: 0,
+  },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 1,
     }
   },
 };

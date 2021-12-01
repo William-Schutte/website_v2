@@ -35,6 +35,7 @@ const Hero = () => {
     <motion.section
       className="w-screen h-screen bg-hero bg-cover"
       variants={pageAnimations}
+      initial="startCenter"
       animate="enter"
       exit="exit"
     >
@@ -45,7 +46,6 @@ const Hero = () => {
             initial="hidden"
             animate={animationStates.h1}
             className="text-customL cursor-default relative"
-            onClick={() => setAnimationStates(['visible', 'visible', 'visible'])}
           >William</motion.h1>
           <motion.h2
             variants={headerAnimations}
@@ -54,45 +54,47 @@ const Hero = () => {
             className="text-customXL mb-8 cursor-default relative"
           >Schutte</motion.h2>
           <ul>
-            <AnimatePresence
-              exitBeforeEnter={true}
-            >
+            <AnimatePresence exitBeforeEnter>
               <Link to="/work">
-              <motion.li
-                key={1}
-                className="main-link"
-                variants={linkAnimations}
-                initial="hidden1"
-                whileHover={linkClicked ? "" : "hover"}
-                animate={animationStates.link1}
-                onClick={() => {
-                  handleLinkClick('link1');
-                }}
-              >Work
-              </motion.li>
+                <motion.li
+                  key={1}
+                  className="main-link"
+                  variants={linkAnimations}
+                  initial="hidden1"
+                  whileHover={linkClicked ? "" : "hover"}
+                  animate={animationStates.link1}
+                  onClick={() => {
+                    handleLinkClick('link1');
+                  }}
+                >Work
+                </motion.li>
               </Link>
-              <motion.li
-                key={2}
-                className="main-link"
-                variants={linkAnimations}
-                initial="hidden"
-                whileHover={linkClicked ? "" : "hover"}
-                animate={animationStates.link2}
-                onClick={() => {
-                  handleLinkClick('link2');
-                }}
-              >About</motion.li>
-              <motion.li
-                key={3}
-                className="main-link"
-                variants={linkAnimations}
-                initial="hidden2"
-                whileHover={linkClicked ? "" : "hover"}
-                animate={animationStates.link3}
-                onClick={() => {
-                  handleLinkClick('link3');
-                }}
-              >Contact</motion.li>
+              <Link to="/about">
+                <motion.li
+                  key={2}
+                  className="main-link"
+                  variants={linkAnimations}
+                  initial="hidden"
+                  whileHover={linkClicked ? "" : "hover"}
+                  animate={animationStates.link2}
+                  onClick={() => {
+                    handleLinkClick('link2');
+                  }}
+                >About</motion.li>
+              </Link>
+              <Link to="/contact">
+                <motion.li
+                  key={3}
+                  className="main-link"
+                  variants={linkAnimations}
+                  initial="hidden2"
+                  whileHover={linkClicked ? "" : "hover"}
+                  animate={animationStates.link3}
+                  onClick={() => {
+                    handleLinkClick('link3');
+                  }}
+                >Contact</motion.li>
+              </Link>
             </AnimatePresence>
           </ul>
         </div>
