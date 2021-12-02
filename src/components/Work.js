@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence, useMotionValue, Override, useAnimation } from "framer-motion";
 import { pageAnimations, linkAnimations, contentAnimations, contentParent } from '../data/animations.js';
 import Sidebar from './Sidebar.js';
+import WorkArticle from './WorkArticle.js';
 
 const defaultAnimationStates = {
   h1: "visible1",
@@ -23,15 +24,19 @@ const exitAnimationStates = {
 const Work = () => {
   const [linkClicked, setLinkClicked] = useState(false);
   const [animationStates, setAnimationStates] = useState(defaultAnimationStates);
-  const scrollAnimControls = useAnimation();
-  const [ref, inView] = useInView();
+  // const scrollAnimControls = useAnimation();
+  // const [ref, inView] = useInView();
 
-  useEffect(() => {
-    console.log(inView);
-    if (inView) {
-      scrollAnimControls.start("show");
-    }
-  }, [scrollAnimControls, inView]);
+  // useEffect(() => {
+  //   console.log(inView);
+  //   if (inView) {
+  //     setTimeout(() => scrollAnimControls.start("show"), 400);
+  //     // scrollAnimControls.start("show");
+  //   } else {
+  //     setTimeout(() => scrollAnimControls.start("initial"), 400);
+  //     // scrollAnimControls.start("initial");
+  //   }
+  // }, [scrollAnimControls, inView]);
 
   function handleLinkClick(key) {
     setLinkClicked(true);
@@ -49,18 +54,20 @@ const Work = () => {
       exit="exitRight"
     >
       <Sidebar currentPage="work"/>
-      <motion.h1 className="bg-gradient-to-b from-black text-7xl py-10 pl-20 absolute top-0 left-0 z-10 w-screen">Work</motion.h1>
+      <motion.h1 className="text-7xl py-10 pl-20 absolute top-0 left-0 w-screen z-10">Work</motion.h1>
       <motion.div
-        // variants={contentParent}
-        // initial="initial"
-        // animate="show"
-        className="w-full h-full px-24 bg-black overflow-scroll"
+        variants={contentParent}
+        initial="initial"
+        animate="show"
+        className="w-full h-full px-24 bg-black overflow-scroll scroll-snap-y"
       >
-        <motion.article variants={contentAnimations} className="h-lg w-lg my-10 flex bg-gray-500 m-auto relative">Cool</motion.article>
-        <motion.article variants={contentAnimations} className="h-lg w-lg my-10 flex bg-gray-500 m-auto relative">Cool</motion.article>
-        <motion.article ref={ref} variants={contentAnimations} initial="initial" animate={scrollAnimControls} className="h-lg w-lg my-10 flex bg-gray-500 m-auto">Cool</motion.article>
-
-        <motion.article variants={contentAnimations} className="h-lg w-lg my-10 flex bg-gray-500 m-auto relative">Cool</motion.article>
+        <div className="my-20 h-20"></div>
+        <WorkArticle name="Project 1" left={0} />
+        <WorkArticle name="Project 2" left={1} />
+        <WorkArticle name="Project 3" left={2} />
+        <WorkArticle name="Project 4" left={3} />
+        <WorkArticle name="Project 5" left={4} />
+        <div className="my-20 h-96"></div>
       </motion.div>
     </motion.section>
   )

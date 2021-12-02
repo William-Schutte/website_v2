@@ -168,32 +168,37 @@ export const linkAnimations = {
 
 export const contentParent = {
   initial: {
-    x: -600,
     opacity: 0,
   },
   show: {
-    x: 0,
     opacity: 1,
     transition: {
       duration: 1,
-      delay: 1,
-      delayChildren: 2,
-      staggerChildren: .6,
+      delay: 2,
     }
   }
 };
 
+// transition: {
+//   duration: 1,
+//   delay: 1,
+//   delayChildren: 2,
+//   staggerChildren: .6,
+// }
+
 export const contentAnimations = {
   initial: {
-    x: 400,
+    x: 0,
+    scale: .4,
     opacity: 0,
   },
   show: {
     x: 0,
+    scale: 1,
     opacity: 1,
     transition: {
       duration: 1,
-      delay: 1,
+      ease: [.02,1.49,.67,.92],
     }
   },
 };

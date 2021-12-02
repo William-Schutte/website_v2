@@ -23,3 +23,18 @@
       transition-all duration-300 ease-in-out;
   }
  }
+
+ @layer utilities {
+  .scroll-snap-none {
+    scroll-snap-type: none;
+  }
+  .scroll-snap-x {
+    scroll-snap-type: x;
+  }
+  .scroll-snap-y {
+    scroll-snap-type: y mandatory;
+  }
+  .scroll-snap-target {
+    scroll-snap-align: center;
+  }
+}
