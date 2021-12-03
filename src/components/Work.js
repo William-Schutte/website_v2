@@ -4,6 +4,9 @@ import { motion, AnimatePresence, useMotionValue, Override, useAnimation } from 
 import { pageAnimations, linkAnimations, contentAnimations, contentParent } from '../data/animations.js';
 import Sidebar from './Sidebar.js';
 import WorkArticle from './WorkArticle.js';
+import bgaround1 from '../media/around1.png';
+import bgvidIterative from '../media/iterative-video.mp4';
+import bgvidNews from '../media/news-video.mp4';
 
 const defaultAnimationStates = {
   h1: "visible1",
@@ -62,9 +65,9 @@ const Work = () => {
         className="w-full h-full px-24 bg-black overflow-scroll scroll-snap-y"
       >
         <div className="my-20 h-20"></div>
-        <WorkArticle name="Project 1" left={0} />
-        <WorkArticle name="Project 2" left={1} />
-        <WorkArticle name="Project 3" left={2} />
+        <WorkArticle name="iterative.ai" desc="Gatsby Landing Page" video={bgvidIterative} />
+        <WorkArticle name="News Explorer" desc="News API - User Auth" video={bgvidNews} />
+        <WorkArticle name="Project 3" image="../images/iterative1" left={2} />
         <WorkArticle name="Project 4" left={3} />
         <WorkArticle name="Project 5" left={4} />
         <div className="my-20 h-96"></div>

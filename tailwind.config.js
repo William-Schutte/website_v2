@@ -7,11 +7,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'mdtall': ['MD-Tall', 'sans-serif']
+      'mdtall': ['MD-Tall', 'sans-serif'],
+      'barcode': ['LibreBarcode', 'serif'],
     },
     extend: {
       backgroundImage: {
-        'hero': "url('./images/bg-keyboard.jpg')",
+        'hero': "url('./media/bg-keyboard.jpg')",
       },
       height: {
         lg: '450px',

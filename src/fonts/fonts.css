@@ -2,3 +2,8 @@
   font-family: 'MD-Tall';
   src: url('./MD-Tall.ttf');
 }
+
+@font-face {
+  font-family: 'LibreBarcode';
+  src: url('./LibreBarcode39Text-Regular.ttf');
+}
