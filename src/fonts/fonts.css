@@ -7,3 +7,8 @@
   font-family: 'LibreBarcode';
   src: url('./LibreBarcode39Text-Regular.ttf');
 }
+
+@font-face {
+  font-family: 'Readex';
+  src: url('./ReadexPro-VariableFont_wght.ttf');
+}

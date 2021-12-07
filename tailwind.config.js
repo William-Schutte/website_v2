@@ -9,6 +9,7 @@ module.exports = {
     fontFamily: {
       'mdtall': ['MD-Tall', 'sans-serif'],
       'barcode': ['LibreBarcode', 'serif'],
+      'readex': ['Readex', 'sans-serif'],
     },
     extend: {
       backgroundImage: {

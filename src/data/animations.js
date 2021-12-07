@@ -179,12 +179,22 @@ export const contentParent = {
   }
 };
 
-// transition: {
-//   duration: 1,
-//   delay: 1,
-//   delayChildren: 2,
-//   staggerChildren: .6,
-// }
+export const childDelay = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 1,
+      delayChildren: 2,
+      staggerChildren: .2,
+    },
+  },
+}
 
 export const contentAnimations = {
   initial: {
