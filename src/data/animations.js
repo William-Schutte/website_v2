@@ -52,8 +52,8 @@ export const pageAnimations = {
 };
 
 export const navAnimations = {
-  initial: {opacity: 0, x: -100, transition: { duration: 1, }, },
-  animate: { opacity: 1, x: 0, transition: { duration: 1, delay: 2, ease: [.25,.4,.08,1], }},
+  initial: { opacity: 0, x: -100, transition: { duration: 1, }, },
+  animate: { opacity: 1, x: 0, transition: { duration: 1, delay: 2, ease: [.25, .4, .08, 1], } },
   exit: {}
 };
 
@@ -208,7 +208,93 @@ export const contentAnimations = {
     opacity: 1,
     transition: {
       duration: 1,
-      ease: [.02,1.49,.67,.92],
+      ease: [.02, 1.49, .67, .92],
     }
   },
 };
+
+export const iconAnimations = {
+  reactI: {
+    rotate: 270,
+    opacity: .8,
+    scale: 0.8,
+  },
+  nuclearI: {
+    rotate: -360,
+    opacity: 0.5,
+    scale: 1.6,
+  },
+  reactF: {
+    rotate: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 2,
+      delay: 3.5,
+      type: "spring",
+    }
+  },
+  tutorI: {
+    scale: 0,
+    opacity: 0,
+  },
+  tutorF: {
+    scale: 1,
+    spin: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 4,
+      ease: [.02, 1.49, .67, .92],
+    }
+  },
+  webI: {
+    x: 200,
+    opacity: .8,
+  },
+  webF: {
+    x: 0,
+    y:0,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      delay: 3,
+      type: "spring",
+      stiffness: 20,
+      damping: 3,
+    }
+  },
+  webF2: {
+    x: 0,
+    y:0,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      delay: 2.5,
+      type: "spring",
+      stiffness: 20,
+      damping: 3,
+    }
+  },
+  gradI: {
+    scale: 2,
+    opacity: 0,
+  },
+  gradF: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      delay: 3.5,
+      ease: [.02, 1.49, .67, .92],
+    }
+  },
+  practicumI: {
+    y: 200,
+    opacity: .6,
+  },
+  hoverSpin: {
+    ro: 360,
+    scale: 1.2,
+  }
+}

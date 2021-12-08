@@ -5,7 +5,7 @@ import { contentAnimations } from '../data/animations.js';
 
 const WorkArticle = ({ name, desc, video, left }) => {
   const scrollAnimControls = useAnimation();
-  const [ref, inView] = useInView({ threshold: .9 });
+  const [ref, inView] = useInView({ threshold: .8 });
 
   useEffect(() => {
     if (inView) {
@@ -18,7 +18,7 @@ const WorkArticle = ({ name, desc, video, left }) => {
   }, [scrollAnimControls, inView]);
 
   return (
-    <article className="w-lg scroll-snap-target mx-auto my-10 bg-gray-800 bg-opacity-30 rounded-xl overflow-hidden relative" style={{ left: `${0 * left}px` }}>
+    <article className="w-xl scroll-snap-target mx-auto my-20 bg-gray-800 bg-opacity-30 rounded-xl overflow-hidden relative">
       {/* could add arrows here in article to indicate more scrolling up/down, 
         would be covered up by div content */}
       <motion.div
@@ -26,7 +26,7 @@ const WorkArticle = ({ name, desc, video, left }) => {
         initial="initial"
         animate={scrollAnimControls}
         variants={contentAnimations}
-        className="h-lg w-lg text-4xl"
+        className="h-xl w-xl text-4xl"
       >
         <video autoPlay loop muted className="w-full h-full relative">
           <source src={video} type="video/mp4" />

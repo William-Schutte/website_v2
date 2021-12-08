@@ -1,9 +1,6 @@
 module.exports = {
   mode: 'jit',
-  purge: {
-    enabled: 'true',
-    content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  },
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
@@ -16,10 +13,11 @@ module.exports = {
         'hero': "url('./media/bg-keyboard.jpg')",
       },
       height: {
-        lg: '450px',
+        l: '40vh',
+        xl: '60vh',
       },
       width: {
-        lg: '800px',
+        xl: '107vh',
       },
       fontSize: {
         'customL': ['8rem', '8rem'],
