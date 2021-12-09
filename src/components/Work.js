@@ -4,9 +4,8 @@ import { motion, AnimatePresence, useMotionValue, Override, useAnimation } from 
 import { pageAnimations, linkAnimations, contentAnimations, contentParent } from '../data/animations.js';
 import Sidebar from './Sidebar.js';
 import WorkArticle from './WorkArticle.js';
-import bgaround1 from '../media/around1.png';
-import bgvidIterative from '../media/iterative-video.mp4';
-import bgvidNews from '../media/news-video.mp4';
+import bgvidIterative from '../media/video/iterative-video.mp4';
+import bgvidNews from '../media/video/news-video.mp4';
 
 const defaultAnimationStates = {
   h1: "visible1",

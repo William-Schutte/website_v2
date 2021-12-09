@@ -10,7 +10,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero': "url('./media/bg-keyboard.jpg')",
+        'hero': "url('./media/images/bg-keyboard.jpg')",
       },
       height: {
         l: '40vh',

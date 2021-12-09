@@ -4,6 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAtom, faChalkboardTeacher, faLaptopCode, faUniversity, faUserGraduate, faRadiationAlt } from '@fortawesome/free-solid-svg-icons'
 import { childDelay, contentAnimations, pageAnimations, iconAnimations, contentParent } from '../data/animations';
 import Sidebar from './Sidebar';
+import iconCss from '../media/icons/i-css.svg';
+import iconExpress from '../media/icons/i-express.svg';
+import iconFigma from '../media/icons/i-figma.svg';
+import iconGatsby from '../media/icons/i-gatsby.svg';
+import iconGithub from '../media/icons/i-github.svg';
+import iconHtml from '../media/icons/i-html.svg';
+import iconJs from '../media/icons/i-js.svg';
+import iconMongo from '../media/icons/i-mongo.svg';
+import iconReact from '../media/icons/i-react.svg';
 
 const About = () => {
   return (
@@ -17,7 +26,7 @@ const About = () => {
       <Sidebar currentPage="about" />
       <h1 className="text-7xl pt-10 pl-20">About</h1>
       <motion.div
-        className="w-full my-14 px-32 py-12 bg-gray-600 grid grid-cols-2 gap-8 font-readex"
+        className="w-full my-14 pl-32 pr-16 py-12 bg-gray-600 grid xl:grid-cols-2 lg:grid-cols-1 gap-8 font-readex"
         variants={childDelay}
         initial="initial"
         animate="show"
@@ -25,9 +34,9 @@ const About = () => {
         <motion.div>
           <motion.h2 className="text-4xl mb-6" variants={contentAnimations}>Me</motion.h2>
           <motion.div className="text-xl mb-10" variants={contentAnimations}>
-            Hey! I'm a software engineer, tutor, and mentor. I work with the MERN stack quite a bit.
-            I'm an enthusiastic, analytical web developer who loves JavaScript and React, and a pro when it comes to
-            Python and Node. I've even made a few RESTful APIs and know my way around Mongo and SQL.
+            Hey! I'm a software engineer, tutor, and mentor. I primarily work with the MERN stack and Django.
+            I'm an enthusiastic, analytical web developer who loves JavaScript, React, Node, and Python.
+            I've even made a few RESTful APIs and know my way around Mongo and SQL.
           </motion.div>
           <motion.div variants={contentAnimations}>
             <motion.h2 className="text-4xl mb-6">Experience</motion.h2>
@@ -35,7 +44,7 @@ const About = () => {
               className="flex flex-wrap max-w-xl ml-8"
               variants={contentParent}
             >
-              <div className="bg-gray-100 h-48 w-48 flex flex-col align-middle items-center overflow-hidden">
+              <div className="bg-gray-100 2xl:h-48 2xl:w-48 h-40 w-40 flex flex-col align-middle items-center overflow-hidden">
                 <motion.div
                   className="flex m-auto"
                   variants={iconAnimations}
@@ -45,7 +54,7 @@ const About = () => {
                   <FontAwesomeIcon icon={faAtom} className="text-8xl text-gray-800 hover:scale-125 hover:rotate-180 hover:opacity-80 transition-all duration-500 ease-in-out cursor-pointer" />
                 </motion.div>
               </div>
-              <div className="bg-gray-800 h-48 w-48 flex flex-col align-middle items-center overflow-hidden">
+              <div className="bg-gray-800 2xl:h-48 2xl:w-48 h-40 w-40 flex flex-col align-middle items-center overflow-hidden">
                 <motion.div
                   className="flex m-auto"
                   variants={iconAnimations}
@@ -55,7 +64,7 @@ const About = () => {
                   <FontAwesomeIcon icon={faChalkboardTeacher} className="text-8xl text-gray-100 hover:scale-125 hover:text-white transition-all duration-500 ease-in-out cursor-pointer" />
                 </motion.div>
               </div>
-              <div className="bg-gray-100 h-48 w-48 flex flex-col align-middle items-center overflow-hidden">
+              <div className="bg-gray-100 2xl:h-48 2xl:w-48 h-40 w-40 flex flex-col align-middle items-center overflow-hidden">
                 <motion.div
                   className="flex m-auto"
                   variants={iconAnimations}
@@ -65,17 +74,17 @@ const About = () => {
                   <FontAwesomeIcon icon={faLaptopCode} className="text-8xl text-gray-800 hover:scale-125 hover:opacity-80 transition-all duration-500 ease-in-out cursor-pointer" />
                 </motion.div>
               </div>
-              <div className="bg-gray-800 h-48 w-48 flex flex-col align-middle items-center overflow-hidden">
+              <div className="bg-gray-800 2xl:h-48 2xl:w-48 h-40 w-40 flex flex-col align-middle items-center overflow-hidden">
                 <motion.div
                   className="flex m-auto"
                   variants={iconAnimations}
                   initial="practicumI"
                   animate="webF2"
                 >
-                  <FontAwesomeIcon icon={faUserGraduate} className="text-8xl text-gray-100" />
+                  <FontAwesomeIcon icon={faUserGraduate} className="text-8xl text-gray-100 hover:scale-125 hover:text-white transition-all duration-500 ease-in-out cursor-pointer" />
                 </motion.div>
               </div>
-              <div className="bg-gray-100 h-48 w-48 flex flex-col align-middle items-center overflow-hidden">
+              <div className="bg-gray-100 2xl:h-48 2xl:w-48 h-40 w-40 flex flex-col align-middle items-center overflow-hidden">
                 <motion.div
                   className="flex m-auto"
                   variants={iconAnimations}
@@ -85,14 +94,14 @@ const About = () => {
                   <FontAwesomeIcon icon={faRadiationAlt} className="text-8xl text-gray-800 hover:scale-125 hover:-rotate-180 hover:opacity-80 transition-all duration-500 ease-in-out cursor-pointer" />
                 </motion.div>
               </div>
-              <div className="bg-gray-800 h-48 w-48 flex flex-col align-middle items-centermoverflow-hidden">
+              <div className="bg-gray-800 2xl:h-48 2xl:w-48 h-40 w-40 flex flex-col align-middle items-centermoverflow-hidden">
                 <motion.div
                   className="flex m-auto"
                   variants={iconAnimations}
                   initial="gradI"
                   animate="gradF"
                 >
-                  <FontAwesomeIcon icon={faUniversity} className="text-8xl text-gray-100" />
+                  <FontAwesomeIcon icon={faUniversity} className="text-8xl text-gray-100 hover:scale-125 hover:text-white transition-all duration-500 ease-in-out cursor-pointer" />
                 </motion.div>
               </div>
               {/* <AboutArticle
@@ -112,9 +121,18 @@ const About = () => {
             </motion.div>
           </motion.div>
         </motion.div>
-        <motion.div className="h-full flex flex-col justify-between">
+        <motion.div className="h-full flex flex-col">
           <motion.h2 className="text-4xl mb-4" variants={contentAnimations}>Tech</motion.h2>
-          <motion.h2 className="text-4xl mb-4" variants={contentAnimations}>Icons will go here</motion.h2>
+          <motion.h2 className="text-4xl mb-auto flex flex-wrap" variants={contentAnimations}>
+            <img src={iconReact} className="h-16 w-16 m-4" alt="AWS" />
+            <img src={iconMongo} className="h-16 w-16 m-4" alt="AWS" />
+            <img src={iconExpress} className="h-16 w-16 m-4" alt="AWS" />
+            <img src={iconJs} className="h-16 w-16 m-4" alt="AWS" />
+            <img src={iconHtml} className="h-16 w-16 m-4" alt="AWS" />
+            <img src={iconCss} className="h-16 w-16 m-4" alt="AWS" />
+            <img src={iconGithub} className="h-16 w-16 m-4" alt="AWS" />
+            <img src={iconFigma} className="h-16 w-16 m-4" alt="AWS" />
+          </motion.h2>
           <motion.div variants={contentAnimations} className="bg-gray-200 flex h-96 w-full">
             <motion.article>
               Main content
