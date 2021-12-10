@@ -174,7 +174,7 @@ export const contentParent = {
     opacity: 1,
     transition: {
       duration: 1,
-      delay: 3,
+      delay: 2,
     }
   }
 };
@@ -190,7 +190,7 @@ export const childDelay = {
     transition: {
       duration: 1,
       delay: 1,
-      delayChildren: 2,
+      delayChildren: 1,
       staggerChildren: .2,
     },
   },
@@ -199,7 +199,7 @@ export const childDelay = {
 export const contentAnimations = {
   initial: {
     x: 0,
-    scale: .4,
+    scale: 0.4,
     opacity: 0,
   },
   show: {
@@ -207,7 +207,7 @@ export const contentAnimations = {
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 1.2,
       ease: [.02, 1.49, .67, .92],
     }
   },
@@ -230,7 +230,7 @@ export const iconAnimations = {
     scale: 1,
     transition: {
       duration: 2,
-      delay: 3.5,
+      delay: 2.5,
       type: "spring",
     }
   },
@@ -244,7 +244,7 @@ export const iconAnimations = {
     opacity: 1,
     transition: {
       duration: 1,
-      delay: 4,
+      delay: 3,
       ease: [.02, 1.49, .67, .92],
     }
   },
@@ -258,7 +258,7 @@ export const iconAnimations = {
     opacity: 1,
     transition: {
       duration: 2,
-      delay: 3,
+      delay: 2,
       type: "spring",
       stiffness: 20,
       damping: 3,
@@ -270,7 +270,7 @@ export const iconAnimations = {
     opacity: 1,
     transition: {
       duration: 2,
-      delay: 2.5,
+      delay: 1.5,
       type: "spring",
       stiffness: 20,
       damping: 3,
@@ -285,7 +285,7 @@ export const iconAnimations = {
     opacity: 1,
     transition: {
       duration: 2,
-      delay: 3.5,
+      delay: 2.5,
       ease: [.02, 1.49, .67, .92],
     }
   },

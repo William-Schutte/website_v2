@@ -55,7 +55,7 @@ const Work = () => {
       animate="enter"
       exit="exitRight"
     >
-      <Sidebar currentPage="work"/>
+      <Sidebar currentPage="work" />
       <motion.h1 className="text-7xl py-10 pl-20 absolute top-0 left-0 w-screen z-10">Work</motion.h1>
       <motion.div
         variants={contentParent}
