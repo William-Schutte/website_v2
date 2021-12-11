@@ -14,6 +14,8 @@ import iconJs from '../media/icons/i-js.svg';
 import iconMongo from '../media/icons/i-mongo.svg';
 import iconReact from '../media/icons/i-react.svg';
 import iconNode from '../media/icons/i-node.svg';
+import AboutArticle from './AboutArticle';
+import { jobData } from '../data/jobData';
 
 const About = () => {
   return (
@@ -34,7 +36,7 @@ const About = () => {
       >
         <motion.div>
           <motion.h2 className="text-4xl mb-6" variants={contentAnimations}>Me</motion.h2>
-          <motion.div className="text-xl mb-10" variants={contentAnimations}>
+          <motion.div className="text-xl leading-8 mb-10" variants={contentAnimations}>
             Hey! I'm a software engineer, tutor, and mentor. I primarily work with the MERN stack and Django.
             I'm an enthusiastic, analytical web developer who loves JavaScript, React, Node, and Python.
             I've even made a few RESTful APIs and know my way around Mongo and SQL.
@@ -137,42 +139,7 @@ const About = () => {
             <img src={iconFigma} className="h-16 w-16 m-4" alt="Figma" />
           </motion.h2>
           <motion.div variants={contentAnimations} className="flex h-96 w-full">
-            <motion.article className="w-full h-full px-8 pt-8 rounded-xl flex flex-col bg-gray-800 drop-shadow-xl relative overflow-hidden">
-              <div className="flex w-full">
-                <h3 className="text-4xl mb-2">Javascript Developer</h3>
-                <h4 className="text-xl ml-auto pb-1 self-center">2021 - Present</h4>
-              </div>
-              <div className="w-full h-6 bg-gradient-to-b from-gray-800 flex absolute left-0 top-20"></div>
-              <div className="pt-4 pr-2 overflow-scroll">
-                <p className="pb-2 text-justify">
-                  I spent 2021 working for a startup devloping web-based computational chemistry software used by
-                  labs and pharmaceutical companies to evaluate drug candidates. The software frontend is built with React,
-                  incorporating multiple JS libraries and external APIs for 3D graphics and certain chemical calculations,
-                  alongside other services using Django and PostgreSQL.
-                </p>
-                <ul className="list-disc pl-4 pb-8">
-                  <li className="p-1">
-                    <p>
-                      Built, maintained, and updated web-based computational chemistry software on a React, Django, PostgreSQL, C++, TCL stack with an
-                      agile startup team of intranational developers
-                    </p>
-                  </li>
-                  <li className="p-1">
-                    <p>
-                      Refactored legacy JQuery/JS components into modern React functional components with Material UI elements
-                    </p>
-                  </li>
-                  <li className="p-1">
-                    <p>
-                      Implemented 3rd party API’s and libraries like 3Dmol.js, RDKit, ESLint, and Next.js to display complex 3D graphics and provide
-                      users with advanced chemical modeling tools
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div className="w-full h-8 bg-gradient-to-t from-gray-800 flex absolute bottom-4 left-0"></div>
-              <div className="w-full h-4 bg-gray-800 flex absolute bottom-0 left-0"></div>
-            </motion.article>
+            <AboutArticle job={jobData[0]} />
           </motion.div>
         </motion.div>
       </motion.div>
